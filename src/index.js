@@ -4,8 +4,23 @@ import App from "./App.js";
 import Learn from "./Learn.js";
 import Toggle from "./Toggle.js";
 import TheImage from "./components/TheImage.js";
+//import "../public/base.css";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+
+
+ReactDOM.render(
+    <div>
+    <div id="notroot"></div> 
+    <div id="learn"></div> 
+    <div id="learn2"></div>
+    <div id="learn3"></div>
+    <div id="learn4"></div>
+    </div>,
+  document.getElementById('root')
+);
+
+
+ReactDOM.render(<App />, document.getElementById("notroot"));
 
 
 const name = 'VINCE!!';
