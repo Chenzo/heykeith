@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App.js";
 import Learn from "./Learn.js";
 import Toggle from "./Toggle.js";
+import TheImage from "./components/TheImage.js";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
@@ -55,3 +56,11 @@ ReactDOM.render(
   <Toggle />,
   document.getElementById('learn3')
 );
+
+
+
+ReactDOM.render(
+  <TheImage/>,
+  document.getElementById('learn4')
+);
+

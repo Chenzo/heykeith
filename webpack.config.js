@@ -17,10 +17,24 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
       }
     ]
   },
-  resolve: { extensions: ["*", ".js", ".jsx"] },
+  resolve: { 
+    extensions: ["*", ".js", ".jsx"],
+    alias: {
+      Images: path.resolve(__dirname, 'images/')
+    }
+  },
   output: {
     path: path.resolve(__dirname, "dist/"),
     publicPath: "/",
