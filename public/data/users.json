@@ -1,0 +1,12 @@
+{
+    "users": [
+        {
+            "name": "nnamdi",
+            "age": 27
+        },
+        {
+            "name": "big boss",
+            "age": 49
+        }
+    ]
+}
