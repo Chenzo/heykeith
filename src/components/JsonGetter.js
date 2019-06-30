@@ -32,14 +32,11 @@ class Jgetter extends React.Component {
 
     request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
-            // Success!
             var data = JSON.parse(request.responseText);
-            console.log(data);
             me.setState({
-                uData: data,
+                uData: data.users,
                 gotData: true
             });
-
             me.showData();
         } else {
             // We reached our target server, but it returned an error
@@ -59,16 +56,21 @@ class Jgetter extends React.Component {
 
   render() {
     if(!this.state.done) {
+        const uuData = this.state.uData;
+        let uusers = uuData.map((user, index) =>
+            <li key={index}>{user.name}</li>
+        );
+
         return (
-        <div className="jsonGetter">Got it
-            <ul className="jsonGetter">
-                
-            </ul>
-        </div>
+            <div className="jsonGetter">Got it
+                <ul className="jsonGetter">
+                    {uusers}
+                </ul>
+            </div>
         );
     } else {
         return (
-        <div className="jsonGetter">Loading...</div>
+            <div className="jsonGetter">Loading...</div>
         );
     }
     
