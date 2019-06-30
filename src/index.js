@@ -4,8 +4,10 @@ import App from "./App.js";
 import Learn from "./Learn.js";
 import Toggle from "./Toggle.js";
 import TheImage from "./components/TheImage.js";
-//import "../public/base.css";
+import Jgetter from "./components/JsonGetter.js";
 
+
+//import "../public/base.css";
 
 
 ReactDOM.render(
@@ -15,6 +17,7 @@ ReactDOM.render(
     <div id="learn2"></div>
     <div id="learn3"></div>
     <div id="learn4"></div>
+    <div id="forJSON"></div>
     </div>,
   document.getElementById('root')
 );
@@ -68,7 +71,7 @@ ReactDOM.render(<Vinchenzo />, document.getElementById('learn2'));
 
 
 ReactDOM.render(
-  <Toggle />,
+  <Jgetter />,
   document.getElementById('learn3')
 );
 
@@ -79,3 +82,8 @@ ReactDOM.render(
   document.getElementById('learn4')
 );
 
+
+ReactDOM.render(
+  <Toggle />,
+  document.getElementById('forJSON')
+);
