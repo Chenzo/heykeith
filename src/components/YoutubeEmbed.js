@@ -11,8 +11,21 @@ class YoutubeEmbed extends React.Component {
     }
 
     render(){
+        const vidID = this.props.vidID;
+        const sizeStyle = {
+            width: "100%",
+            height: "100%"
+        };
         return (
-            <iframe id="video" width="420" height="315" src="//www.youtube.com/embed/9B7te184ZpQ?rel=0" frameborder="0" allowfullscreen></iframe>
+            <div style={sizeStyle}>
+                <iframe width="100%" 
+                height="100%" 
+                src={"https://www.youtube.com/embed/"+ vidID + "?rel=0;&autoplay=1" }
+                frameBorder="0" 
+                allowFullScreen 
+                allow="autoplay; fullscreen">
+                </iframe>
+            </div>
         );
     }
 }
