@@ -2,6 +2,7 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader";
+import "./Youtube.scss";
 
 
 class Youtube extends React.Component {
@@ -9,6 +10,7 @@ class Youtube extends React.Component {
         super(props);
         this.state = {
         };
+        this.vidClick = this.vidClick.bind(this);
     }
 
 
@@ -18,11 +20,17 @@ class Youtube extends React.Component {
         
     }
 
+
+    vidClick() {
+        console.log("load this video here: " + this.props.videodata.id);
+    }
+
+
     render(){
         const vData = this.props.videodata;
         console.log(vData);
         return (
-            <div className="youtube_vid"><h5>YouTube {vData.title}</h5>
+            <div className="youtube_vid" onClick={this.vidClick}><h5>YouTube {vData.title}</h5>
             <img className="thumbnail" src={"https://img.youtube.com/vi/" + vData.id + "/0.jpg"} />
             <div id="ytplayer"></div>
             </div>
