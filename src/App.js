@@ -47,8 +47,8 @@ class App extends Component{
   render(){
     if(this.state.gotData) {
 
-      const vids = this.state.uData.map((videos) =>
-        <Youtube />
+      const vids = this.state.uData.map((videos, index) =>
+        <Youtube key={index} videodata={videos}/>
       );
 
       return(

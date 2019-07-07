@@ -3,12 +3,20 @@
         {
             "artist": "Unkle",
             "title": "Heaven",
-            "url": "https://www.youtube.com/watch?v=yO2SJmMUr6A"
+            "url": "https://www.youtube.com/watch?v=yO2SJmMUr6A",
+            "id": "yO2SJmMUr6A"
         },
         {
             "artist": "Porkka Playboys",
             "title": "Bohemian Rhapsody",
-            "url": "https://www.youtube.com/watch?v=irLsjBDPe5c"
+            "url": "https://www.youtube.com/watch?v=irLsjBDPe5c",
+            "id": "irLsjBDPe5c"
+        },
+        {
+            "artist": "Hobo Johnson",
+            "title": "Typical Story",
+            "url": "https://www.youtube.com/watch?v=u-2LTXFjjGc",
+            "id": "u-2LTXFjjGc"
         }
     ]
 }
