@@ -3,6 +3,7 @@
 import React, {Component} from "react";
 import {hot} from "react-hot-loader";
 import "./Youtube.scss";
+import YoutubeEmbed from "./YoutubeEmbed.js";
 
 
 class Youtube extends React.Component {
@@ -12,6 +13,8 @@ class Youtube extends React.Component {
         };
         this.vidClick = this.vidClick.bind(this);
         
+
+        this.vidhtml = "vince";
     }
 
 
@@ -23,7 +26,7 @@ class Youtube extends React.Component {
 
 
     vidClick() {
-        const vidID = this.props.videodata.id;
+        /* const vidID = this.props.videodata.id;
         console.log("load this video here: " + vidID);
 
         var player;
@@ -32,7 +35,11 @@ class Youtube extends React.Component {
             width: '640',
             videoId: vidID,
             autoplay: 1
-        });
+        }); */
+
+        console.log("boop");
+
+        //ReactDOM.render(<YoutubeEmbed />, document.getElementById("ytplayer_" + vidID));
     }
 
 
