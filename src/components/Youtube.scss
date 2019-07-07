@@ -1,5 +1,30 @@
 .youtube_vid {
     .thumbnail {
         border: 2px solid red;
+        width: 640px;
+        height: 360px;
+    }
+}
+
+
+.video_holder {
+    width: 640px;
+    height: 360px;
+    position: relative;
+    background-color: #aaa;
+    .bgimage {
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+    }
+    .ytplayer {
+        z-index: 10;
+        position: absolute;
+        top: 0px;
+        left: 0px;
     }
 }

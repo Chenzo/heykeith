@@ -11,6 +11,7 @@ class Youtube extends React.Component {
         this.state = {
         };
         this.vidClick = this.vidClick.bind(this);
+        
     }
 
 
@@ -22,30 +23,38 @@ class Youtube extends React.Component {
 
 
     vidClick() {
-        console.log("load this video here: " + this.props.videodata.id);
+        const vidID = this.props.videodata.id;
+        console.log("load this video here: " + vidID);
+
+        var player;
+        player = new YT.Player("ytplayer_" + vidID, {
+            height: '360',
+            width: '640',
+            videoId: vidID,
+            autoplay: 1
+        });
     }
 
 
     render(){
         const vData = this.props.videodata;
+        const bgstyle = {
+            backgroundImage:'url("http://img.youtube.com/vi/'+ vData.id + '/0.jpg")',
+            backgroundPosition: 'center'
+        };
         console.log(vData);
         return (
             <div className="youtube_vid" onClick={this.vidClick}><h5>YouTube {vData.title}</h5>
-            <img className="thumbnail" src={"https://img.youtube.com/vi/" + vData.id + "/0.jpg"} />
-            <div id="ytplayer"></div>
+            <div className="video_holder">
+                <div className="ytplayer"><div id={"ytplayer_" + vData.id}></div></div>
+                <div className="bgimage"  style={bgstyle}></div>
+            </div>
+            
             </div>
         );
     }
 
 }
-var player;
-        function onYouTubePlayerAPIReady() {
-            console.log("here?");
-            player = new YT.Player('ytplayer', {
-                height: '360',
-                width: '640',
-                videoId: 'M7lc1UVf-VE'
-            });
-        }
+
 
 export default hot(module)(Youtube);
