@@ -1,7 +1,7 @@
 
 import React, {Component} from "react";
 import {hot} from "react-hot-loader";
-
+import "./YoutubeEmbed.scss";
 
 class YoutubeEmbed extends React.Component {
     constructor(props) {
@@ -12,12 +12,8 @@ class YoutubeEmbed extends React.Component {
 
     render(){
         const vidID = this.props.vidID;
-        const sizeStyle = {
-            width: "100%",
-            height: "100%"
-        };
         return (
-            <div style={sizeStyle}>
+            <div className="youtubeResponsive">
                 <iframe width="100%" 
                 height="100%" 
                 src={"https://www.youtube.com/embed/"+ vidID + "?rel=0;&autoplay=1" }

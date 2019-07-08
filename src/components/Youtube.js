@@ -39,8 +39,10 @@ class Youtube extends React.Component {
 
         return (
             <div className="youtube_vid" onClick={this.vidClick}>
-                <h5>YouTube {vData.title}</h5>
+            <h4>{vData.title}</h4>
+            <h5>{vData.artist}</h5>
                 <div className="video_holder">
+                    
                     <div className="ytplayer">{this.state.vidEmbed}</div>
                     <div className="bgimage"  style={bgstyle}></div>
                 </div>
